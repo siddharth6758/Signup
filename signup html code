@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+        body{
+            margin: 0; 
+            padding: 0;
+            background: #3336ff;
+            overflow: hidden;
+            font-family: 'Poppins',sans-serif;
+        }
+        #semi1{
+            background: rgb(231, 233, 130);
+            width: 450px;
+            height: 300px;
+            border-radius:0% 100% 99% 1% / 100% 0% 100% 0%;
+        }
+        #semi2{
+            background: rgb(218, 91, 91);
+            float:right;
+            width: 450px;
+            height: 300px;
+            border-radius:100% 0% 0% 100% / 100% 0% 100% 0% ;
+        }
+        #semi3{
+            background: rgb(142, 250, 115);
+            position: relative;
+            left: 50%;
+            top:-300px;
+            width: 200px;
+            height: 80px;
+            border-radius:0% 100% 49% 51% / 0% 0% 100% 100% ;
+        }
+        .container{
+            background:  rgba(255,255,255,0.5);
+            backdrop-filter: saturate(180%) blur(10px);
+            width: 850px; height:450px;
+            box-shadow: 0px 5px 20px 1px rgba(0,0,0,0.23);
+            position: relative;
+            top:-540px;
+            left:200px;
+            border-radius: 20px;
+            padding:15px;
+            display:flex;
+        }
+        #half1{
+            border:none;
+            border-right: 1px solid #5a5555;
+            width:50%;
+            height:100%;
+            font-size:30px;
+        }
+        #half1 img{
+            background: transparent;
+            width: 70%;
+            height:55%;
+            margin:60px 0 0 60px;
+        }
+        #half1 span{
+            position: relative;
+            top:20px;
+            left:140px;
+            font-weight: bold;
+        }
+        #half2{
+            margin:20px 0 0 70px;
+            font-weight: bold;
+        }
+        #half2 input{
+            margin:10px;
+        }
+        input{
+            padding:5px;
+            border:none;
+            width: 200px;
+            background:transparent;
+            border-bottom:2px solid #5a5555;
+        }
+        #half2 button{
+            background:#3336ff;
+            border-radius: 15px;
+            border:none;
+            width:100px;
+            padding:5px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        #half2 button:hover{
+            background:#4649ff;
+        }
+        ::placeholder{
+            color:#5a5555;
+        }
+        input:focus{
+            outline:none;
+        }
+    </style>
+</head>
+<body>
+    <div id="semi1"></div>
+    <div id="semi2"></div>
+    <div id="semi3"></div>
+    <div class="container">
+        <div id="half1">
+            <img src="https://www.clipartmax.com/png/full/326-3269254_pr…ger-office-desk-man-working-in-office-clipart.png" >
+            <span>Welcome !</span>
+        </div>
+        <div id="half2">
+            <span style="font-size:30px;">Sign up</span><br><br>
+            <form>
+                Username :<br>
+                <input type="text" name="username" placeholder="Enter Username" required><br>
+                Email-ID :<br>
+                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Enter Email" required><br>
+                Password :<br>
+                <input type="password" id="pass" placeholder="Enter Password" required><br>
+                Confirm Password :<br>
+                <input type="password" id="cpass" placeholder="Repeat Password" required><br>
+                <button type="button" onclick="matchpassword()">Sign-Up</button>
+            </form>
+        </div>
+    </div>
+    <script>
+    function matchpassword() {
+     let a = document.getElementById("pass").value;   
+     let b = document.getElementById("cpass").value; 
+    if(b!=a){
+        alert('Passwords do not match!');
+        }
+    else{
+        alert('Passwords matches!');
+        }
+    }
+    </script>
+</body>
+</html>
+<!-- Credit for image : https://www.clipartmax.com -->
